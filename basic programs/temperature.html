@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head><title>Just A temeperature converter</title></head>
+<body>
+
+<p>Insert a number you wish to see in Fahr</p>
+
+<p><input id="cel" onkeyup="convert('cel')"> degrees Celsius</p>
+
+<p><input id="fahr" onkeyup="convert('fahr')"> degrees Fahrenheit</p> 
+
+<script>
+function convert(degree) {
+  var x;
+  if (degree == "cel") {
+    x = document.getElementById("cel").value * 9 / 5 + 32;
+    document.getElementById("fahr").value = Math.round(x);
+  } else {
+    x = (document.getElementById("fahr").value -32) * 5 / 9;
+    document.getElementById("cel").value = Math.round(x);
+  }
+}
+</script>
+
+</body>
+</html>
